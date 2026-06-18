@@ -5,13 +5,13 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Copy requirements file
-COPY requirements.txt .
+#COPY requirements.txt .
 
 # Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+#RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY . .
+COPY .  .
 
 # Run application
-CMD ["python", "app.py"]
+CMD ["python", "pythoncode.py"]
