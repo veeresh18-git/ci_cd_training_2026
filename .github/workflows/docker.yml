@@ -23,13 +23,13 @@ jobs:
            username: ${{ vars.DOCKERHUB_USERNAME }}
            password: ${{ secrets.DOCKERHUB_PASS}}
        - name: docker build
-         run: docker build -t app:v1 .
+         run: docker build -t ${{ github.run_number }} .
 
        - name: Tag Image
-         run: docker tag app:v1 ${{ vars.DOCKERHUB_USERNAME }}/app:v1
+         run: docker tag app:v1 ${{ vars.DOCKERHUB_USERNAME }}/app:${{ github.run_number }}
          
        - name: docker push
-         run: docker push ${{ vars.DOCKERHUB_USERNAME }}/app:v1
+         run: docker push ${{ vars.DOCKERHUB_USERNAME }}/app:${{ github.run_number }}
        
         
   
