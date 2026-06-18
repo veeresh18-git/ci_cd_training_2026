@@ -18,7 +18,7 @@ jobs:
            username: ${{ vars.DOCKERHUB_USERNAME }}
            password: ${{ secrets.DOCKERHUB_PASS}}
        - name: docker build
-         run: docker build -t ${{ github.run_number }} .
+         run: docker build -t app:${{ github.run_number }} .
 
        - name: verify image name
          run: |
