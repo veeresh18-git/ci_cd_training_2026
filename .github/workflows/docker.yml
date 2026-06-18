@@ -26,7 +26,7 @@ jobs:
          run: docker build -t ${{ github.run_number }} .
 
        - name: Tag Image
-         run: docker tag app:v1 ${{ vars.DOCKERHUB_USERNAME }}/app:${{ github.run_number }}
+         run: docker tag app:${{ github.run_number }} ${{ vars.DOCKERHUB_USERNAME }}/app:${{ github.run_number }}
          
        - name: docker push
          run: docker push ${{ vars.DOCKERHUB_USERNAME }}/app:${{ github.run_number }}
