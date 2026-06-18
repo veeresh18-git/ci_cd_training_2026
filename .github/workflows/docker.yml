@@ -24,6 +24,9 @@ jobs:
            password: ${{ secrets.DOCKERHUB_PASS}}
        - name: docker build
          run: docker build -t app:v1 .
+
+       - name: docker push
+         run: docker push app:v1
        
         
   
