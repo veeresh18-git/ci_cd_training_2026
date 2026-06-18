@@ -29,7 +29,7 @@ jobs:
          run: docker tag app:v1 ${{ vars.DOCKERHUB_USERNAME }}/app:v1
          
        - name: docker push
-         run: docker push ${{ vars.DOCKERHUB_USERNAME }}/app-python:v1
+         run: docker push ${{ vars.DOCKERHUB_USERNAME }}/app:v1
        
         
   
