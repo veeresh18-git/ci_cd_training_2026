@@ -25,8 +25,11 @@ jobs:
        - name: docker build
          run: docker build -t app:v1 .
 
+       - name: Tag Image
+         run: docker tag app:v1 ${{ vars.DOCKERHUB_USERNAME }}/app:v1
+         
        - name: docker push
-         run: docker push app:v1
+         run: docker push ${{ vars.DOCKERHUB_USERNAME }}/app-python:v1
        
         
   
