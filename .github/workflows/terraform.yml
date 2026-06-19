@@ -26,6 +26,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
+      - name: terraform init
+        run: terraform init
+
       - name: terraform destory
         run: terraform destroy -var-file="dev.tfvars" -auto-approve
 
