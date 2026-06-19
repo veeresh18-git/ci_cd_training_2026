@@ -27,7 +27,7 @@ jobs:
           aws-region: ap-south-1
 
       - name: terraform destory
-        run: terraform destory -var-file="dev.tfvars" -auto-approve
+        run: terraform destroy -var-file="dev.tfvars" -auto-approve
 
   #    - name: terraform init
   #      run: terraform init
