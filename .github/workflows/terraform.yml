@@ -1,0 +1,16 @@
+name: terraform setup
+on:
+ push:
+   branches:
+     - main
+jobs:
+ 
+  create-infra:
+
+    runs_on: self-hosted
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: terraform setup
+	      uses: hashicorp/setup-terraform@v4
