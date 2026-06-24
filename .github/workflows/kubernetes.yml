@@ -18,4 +18,8 @@ jobs:
           export KUBECONFIG=$HOME/.kube/config
           
       - name: verify access
-        run: kubectl get nodes
+        run: |
+          export KUBECONFIG=$HOME/.kube/config
+          kubectl config current-context
+          kubectl get nodes
+          
