@@ -6,6 +6,7 @@ on:
 jobs:
   deployment-Kubernetes:
     runs-on: ubuntu-latest
+    environment: kube-prod
     steps:
       - name: checkout
         uses: actions/checkout@v4
