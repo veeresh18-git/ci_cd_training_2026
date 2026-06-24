@@ -3,7 +3,7 @@ name: terraform setup
 on:
   push:
     branches:
-      - main
+      - veeresh
 
 jobs:
   create-infra:
