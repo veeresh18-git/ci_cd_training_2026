@@ -15,6 +15,7 @@ jobs:
           mkdir -p ~/.kube
           echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
           chmod 600 ~/.kube/config
+          export KUBECONFIG=$HOME/.kube/config
           
       - name: verify access
         run: kubectl get nodes
