@@ -12,7 +12,7 @@ jobs:
         
       - name: setup kubeconfig
         run: |
-          mkdir -p ~/.kube/config
+          mkdir -p ~/.kube
           echo "${{ secrets.KUBE_CONFIG }}" > ~/.kube/config
           chmod 600 ~/.kube/config
           
