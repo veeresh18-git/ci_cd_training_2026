@@ -13,7 +13,7 @@ permissions:
 jobs:
   deployment-kubernetes:
     runs-on: ubuntu-latest
-
+    environment: dev
     steps:
       - name: Checkout
         uses: actions/checkout@v4
