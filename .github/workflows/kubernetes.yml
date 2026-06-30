@@ -31,4 +31,4 @@ jobs:
             --name ksd-eks-v2
 
       - name: Debug
-        run: kubectl get nodes 
+        run: kubectl get pods
