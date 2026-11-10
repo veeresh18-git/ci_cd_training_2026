@@ -39,11 +39,3 @@ jobs:
       - name: terraform destory
         run: terraform destroy -var-file="dev.tfvars" -auto-approve
 
-  #    - name: terraform init
-  #      run: terraform init
-
- #     - name: terraform plan 
-  #      run: terraform plan -var-file="dev.tfvars"
-
-   #   - name: terraform apply
-#        run: terraform apply -var-file="dev.tfvars" -auto-approve
